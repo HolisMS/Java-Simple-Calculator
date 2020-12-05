@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.acecyle.calculator.CalculatorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:id="@+id/line"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:textStyle="bold"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/edit_size"
+            android:id="@+id/kolom1" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:textStyle="bold"
+            android:textColor="@color/Black"
+            android:textSize="20dp"
+            android:text="   "
+            android:id="@+id/operan"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:textStyle="bold"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/edit_size"
+            android:id="@+id/kolom2" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:textStyle="bold"
+            android:textColor="@color/Black"
+            android:textSize="55sp"
+            android:text=" "
+            android:id="@+id/hasil"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:textSize="15sp"
+            android:text="   "
+            android:id="@+id/notifikasi"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/line"
+        android:weightSum="10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@color/Black"
+            android:orientation="horizontal"
+            android:theme="@style/buttonstyle1">
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="btnClearClicked"
+                android:text="C"
+                android:textColor="@color/DeepSkyBlue"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="OnClick" />
+
+            <ImageButton
+                android:id="@+id/btnDlt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="btnDltClicked"
+                android:src="@drawable/ic_backspace_black_24dp"
+                tools:ignore="OnClick" />
+
+            <Button
+                android:id="@+id/btnPersen"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="btnPersenClicked"
+                android:text="%"
+                android:textColor="@color/WhiteSmoke"
+                android:textSize="@dimen/teks_button_size"
+                android:textStyle="bold"
+                tools:ignore="OnClick" />
+
+            <Button
+                android:id="@+id/btnKali"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:onClick="btnKaliClicked"
+                android:text="X"
+                android:textColor="@color/WhiteSmoke"
+                android:textSize="@dimen/teks_button_size"
+                android:textStyle="bold"
+                tools:ignore="OnClick" />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:theme="@style/buttonstyle1"
+        android:background="@color/Black"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="7"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textSize="@dimen/teks_button_size"
+            android:textColor="@color/WhiteSmoke"
+            android:id="@+id/btn7"
+            android:onClick="btn7Clicked"
+            tools:ignore="OnClick" />
+
+        <Button
+            android:id="@+id/btn8"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:onClick="btn8Clicked"
+            android:layout_weight="1"
+            android:text="8"
+            android:textColor="@color/WhiteSmoke"
+            android:textSize="@dimen/teks_button_size"
+            android:textStyle="bold"
+            tools:ignore="OnClick" />
+
+        <Button
+            android:id="@+id/btn9"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="btn9Clicked"
+            android:text="9"
+            android:textColor="@color/WhiteSmoke"
+            android:textSize="@dimen/teks_button_size"
+            android:textStyle="bold"
+            tools:ignore="OnClick" />
+
+        <ImageButton
+            android:id="@+id/btnKurang"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_remove_black_24dp"
+            android:onClick="btnKurangClicked"
+            tools:ignore="OnClick" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:theme="@style/buttonstyle1"
+        android:background="@color/Black"
+        android:weightSum="8"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="4"
+            android:textStyle="bold"
+            android:textSize="@dimen/teks_button_size"
+            android:textColor="@color/WhiteSmoke"
+            android:id="@+id/btn4"
+            android:onClick="btn4Clicked"
+            tools:ignore="OnClick" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="5"
+            android:textStyle="bold"
+            android:textSize="@dimen/teks_button_size"
+            android:textColor="@color/WhiteSmoke"
+            android:id="@+id/btn5"
+            android:onClick="btn5Clicked"
+            tools:ignore="OnClick" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="6"
+            android:textStyle="bold"
+            android:textSize="@dimen/teks_button_size"
+            android:textColor="@color/WhiteSmoke"
+            android:id="@+id/btn6"
+            android:onClick="btnPersenClicked"
+            tools:ignore="OnClick" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:text="+"
+            android:textStyle="bold"
+            android:textSize="@dimen/teks_button_size"
+            android:textColor="@color/WhiteSmoke"
+            android:id="@+id/btnTambah"
+            android:onClick="btnTambahClicked"
+            tools:ignore="OnClick" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:theme="@style/buttonstyle1"
+        android:background="@color/Black"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="1"
+            android:textStyle="bold"
+            android:textSize="@dimen/teks_button_size"
+            android:textColor="@color/WhiteSmoke"
+            android:id="@+id/btn1"
+            android:onClick="btn1Clicked"
+            tools:ignore="OnClick" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="2"
+            android:textStyle="bold"
+            android:textSize="@dimen/teks_button_size"
+            android:textColor="@color/WhiteSmoke"
+            android:id="@+id/btn2"
+            android:onClick="btn2Clicked"
+            tools:ignore="OnClick" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="3"
+            android:textStyle="bold"
+            android:textSize="@dimen/teks_button_size"
+            android:textColor="@color/WhiteSmoke"
+            android:id="@+id/btn3"
+            android:onClick="btn3Clicked"
+            tools:ignore="OnClick" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="/"
+            android:textStyle="bold"
+            android:textSize="@dimen/teks_button_size"
+            android:textColor="@color/WhiteSmoke"
+            android:id="@+id/btnBagi"
+            android:onClick="btnBagiClicked"
+            tools:ignore="OnClick" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:background="@color/Black"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnTitik"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="btnTitikClicked"
+            android:text="."
+            android:textColor="@color/WhiteSmoke"
+            android:textSize="@dimen/teks_button_size"
+            android:textStyle="bold"
+            android:theme="@style/buttonstyle1"
+            tools:ignore="OnClick" />
+
+        <Button
+            android:id="@+id/btn0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="btn0Clicked"
+            android:text="0"
+            android:textColor="@color/WhiteSmoke"
+            android:textSize="@dimen/teks_button_size"
+            android:textStyle="bold"
+            android:theme="@style/buttonstyle1"
+            tools:ignore="OnClick" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:theme="@style/buttonstyle2"
+            android:layout_weight="2"
+            android:text="="
+            android:textStyle="bold"
+            android:textSize="@dimen/teks_button_size"
+            android:textColor="@color/WhiteSmoke"
+            android:id="@+id/btnHitung"
+            android:onClick="btnHitungClicked"
+            tools:ignore="OnClick" />
+    </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+
+

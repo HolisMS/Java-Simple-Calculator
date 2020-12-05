@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#DCDCDC</color>
+
+    //toolbar
+    <color name="White">#FFFFFF</color>
+    <color name="WhiteSmoke">#F5F5F5</color>
+    <color name="Gainsboro">#DCDCDC</color>
+    <color name="Orange">#ff6200</color>
+
+    //button1
+    <color name="Black">#000000</color>
+    <color name="DarkGrey">#A9A9A9</color>
+
+    //button2
+    <color name="DeepSkyBlue">#00BFFF</color>
+    <color name="DodgerBlue">#0c61b3</color>
+
+    //tekscolor
+    <color name="teks">#464646</color>
+    <color name="teksColor">#292929</color>
+
+</resources>

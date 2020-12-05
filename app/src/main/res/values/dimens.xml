@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">5dp</dimen>
+    <dimen name="activity_vertical_margin">2dp</dimen>
+    <dimen name="activity_margin_rumus">4dp</dimen>
+    <dimen name="teks_button_size">25sp</dimen>
+    <dimen name="edit_size">40sp</dimen>
+    <dimen name="Title_teks_size">20sp</dimen>
+    <dimen name="Teks_size">15sp</dimen>
+    <dimen name="Title_teks">30sp</dimen>
+</resources>
